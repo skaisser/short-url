@@ -23,6 +23,7 @@ class CreateShortUrlVisitsTable extends Migration
             $table->string('browser_version')->nullable();
             $table->timestamp('visited_at');
             $table->timestamps();
+            $table->BigInteger('user_id')->nullable();
 
             $table->foreign('short_url_id')->references('id')->on('short_urls')->onDelete('cascade');
         });
