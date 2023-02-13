@@ -110,6 +110,7 @@ class Resolver
         $visit = new ShortURLVisit();
 
         $visit->short_url_id = $shortURL->id;
+        $visit->user_id = $shortURL->user_id;
         $visit->visited_at = now();
 
         if ($shortURL->track_visits) {
